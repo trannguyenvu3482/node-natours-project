@@ -29,5 +29,8 @@
     "livereload": "^0.9.3",
     "nodemon": "^2.0.20",
     "prettier": "^2.7.1"
+  },
+  "engines": {
+    "node": ">=12.0.0"
   }
 }
