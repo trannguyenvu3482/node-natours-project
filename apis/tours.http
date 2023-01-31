@@ -1,0 +1,39 @@
+# Tours API
+@hostname = http://127.0.0.1:3000/api/v1
+@endpoint = tours
+@id = 636a11ce03e99b2d9cf7f4bf
+
+### 
+# Get all tours
+GET {{hostname}}/{{endpoint}}
+
+###
+
+# Get a single tour
+GET {{hostname}}/{{endpoint}}/{{id}}
+
+###
+
+# Create a new tour
+POST {{hostname}}/{{endpoint}}
+Content-Type: application/json
+
+{
+    "name": "The Snow Adventure",
+    "price": 697,
+    "rating": 4.8
+}
+
+###
+
+# Update a tour
+PATCH {{hostname}}/{{endpoint}}/{{id}}
+Content-Type: application/json
+
+{
+    "price": 597
+}
+
+###
+# Delete a tour
+DELETE {{hostname}}/{{endpoint}}/{{id}}
