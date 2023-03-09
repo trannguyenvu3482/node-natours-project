@@ -10,6 +10,8 @@ process.on('unhandledRejection', err => {
 process.on('uncaughtException', err => {
   console.log('Uncaught Exception, shutting down server...');
   console.log(err.name, err.message);
+
+  // eslint-disable-next-line no-use-before-define
   server.close(() => {
     process.exit(1);
   });
