@@ -7,15 +7,15 @@ process.on('unhandledRejection', err => {
   process.exit(1);
 });
 
-process.on('uncaughtException', err => {
-  console.log('Uncaught Exception, shutting down server...');
-  console.log(err.name, err.message);
+// process.on('uncaughtException', err => {
+//   console.log('Uncaught Exception, shutting down server...');
+//   console.log(err.name, err.message);
 
-  // eslint-disable-next-line no-use-before-define
-  server.close(() => {
-    process.exit(1);
-  });
-});
+//   // eslint-disable-next-line no-use-before-define
+//   server.close(() => {
+//     process.exit(1);
+//   });
+// });
 
 dotenv.config({ path: './config.env' });
 
